@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Formulário Criativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <form action="enviar.php" method="POST" class="styled-form">
+            <h2>Formulário de Interesse</h2>
+
+            <fieldset class="form-fieldset">
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" maxlength="50" class="styled-input">
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" placeholder="8 caracteres" maxlength="8" class="styled-input">
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <legend>Suas Preferências</legend>
+                <h3>Linguagens que tem Interesse</h3>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="linguagem[]" value="cbuilder" id="cb_c++"> <label for="cb_c++">C++</label>
+                    <input type="checkbox" name="linguagem[]" value="php" checked id="cb_php"> <label for="cb_php">PHP</label>
+                    <input type="checkbox" name="linguagem[]" value="delphi" id="cb_delphi"> <label for="cb_delphi">Delphi</label>
+                </div>
+
+                <h3>Cursos que já fez na Escola</h3>
+                <select name="escola" class="styled-select">
+                    <option value="bcb">C++Builder</option>
+                    <option selected value="php">PHP</option>
+                    <option value="delphi">Delphi</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <legend>Mensagem</legend>
+                <label for="opiniao">Sua mensagem:</label>
+                <textarea name="opiniao" rows="5" placeholder="Digite aqui sua mensagem..." class="styled-textarea"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="styled-button">
+        </form>
+    </div>
+</body>
+</html>
